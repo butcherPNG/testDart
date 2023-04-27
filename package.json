@@ -1,0 +1,12 @@
+{
+    "name": "my-dart-server",
+    "version": "1.0.0",
+    "description": "My Dart server on Glitch",
+    "main": "newServer.dart",
+    "scripts": {
+      "start": "sh start.sh"
+    },
+    "dependencies": {
+      "dart_sdk": ">=2.19.2 <3.0.0"
+    }
+  }
