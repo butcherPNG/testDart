@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: google/dart:latest
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: pub get
+      - run:
+          name: Run tests
+          command: dart test/newServer_test.dart
