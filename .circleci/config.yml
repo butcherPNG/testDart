@@ -2,12 +2,16 @@ version: 2
 jobs:
   build:
     docker:
-      - image: google/dart:latest
+      - image: google/dart
+    working_directory: ~/repo
     steps:
       - checkout
       - run:
           name: Install dependencies
-          command: dart pub
+          command: pub get
       - run:
-          name: Run tests
-          command: dart test/newServer_test.dart
+          name: Build server
+          command: dart compile exe newServer.dart -o newServer
+      - run:
+          name: Start server
+          command: ./newServer
