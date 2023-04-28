@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Install dependencies
-          command: pub get
+          command: dart pub
       - run:
           name: Run tests
           command: dart test/newServer_test.dart
